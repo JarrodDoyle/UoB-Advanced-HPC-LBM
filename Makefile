@@ -2,8 +2,9 @@
 
 EXE=d2q9-bgk
 
-CC=gcc
-CFLAGS= -std=c99 -Wall -O3
+CC=mpiicc
+# CFLAGS= -std=c99 -Wall -Ofast -xCORE-AVX2 -restrict -qopenmp -qopt-report-phase=vec -qopt-report=5 -g 
+CFLAGS= -std=c99 -Wall -Ofast -xCORE-AVX2 -restrict -qopenmp
 LIBS = -lm
 
 FINAL_STATE_FILE=./final_state.dat
